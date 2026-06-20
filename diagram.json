@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "author": "MEHER UNNISA",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 19.8, "left": 37.8, "attrs": {} },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": -64,
+      "left": -191.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr2",
+      "top": 137.6,
+      "left": -181.6,
+      "attrs": {}
+    },
+    { "type": "wokwi-photoresistor-sensor", "id": "ldr3", "top": 32, "left": -191.2, "attrs": {} },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr4",
+      "top": 233.6,
+      "left": -181.6,
+      "attrs": {}
+    },
+    { "type": "wokwi-servo", "id": "servo1", "top": -88.4, "left": 422.4, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo2", "top": -155.6, "left": 220.8, "attrs": {} }
+  ],
+  "connections": [
+    [ "uno:GND.2", "ldr4:GND", "black", [ "v67.7", "h-179.1" ] ],
+    [ "uno:GND.2", "ldr2:GND", "black", [ "v-28.3", "h-179.1" ] ],
+    [ "uno:GND.2", "ldr3:GND", "black", [ "v-133.9", "h-188.7" ] ],
+    [ "uno:GND.2", "ldr1:GND", "black", [ "v-229.9", "h-188.7" ] ],
+    [ "uno:5V", "ldr4:VCC", "red", [ "v58.1", "h-169.6" ] ],
+    [ "ldr2:VCC", "uno:5V", "red", [ "h172.8", "v38.4" ] ],
+    [ "uno:5V", "ldr3:VCC", "red", [ "v-143.5", "h-179.2" ] ],
+    [ "uno:5V", "ldr1:VCC", "red", [ "v-239.5", "h-179.2" ] ],
+    [ "servo2:GND", "uno:GND.2", "black", [ "h-9.6", "v297.6" ] ],
+    [ "servo1:GND", "uno:GND.2", "black", [ "h-19.2", "v230.4" ] ],
+    [ "servo2:V+", "uno:5V", "red", [ "h-19.2", "v288.1" ] ],
+    [ "servo1:V+", "uno:5V", "green", [ "h-28.8", "v220.9" ] ],
+    [ "servo2:PWM", "uno:8", "yellow", [ "h0" ] ],
+    [ "servo1:PWM", "uno:9", "yellow", [ "h-259.2", "v29" ] ],
+    [ "ldr1:AO", "uno:A0", "white", [ "h230.4", "v210.5" ] ],
+    [ "ldr2:AO", "uno:A1", "white", [ "h268.8", "v28.1" ] ],
+    [ "ldr3:AO", "uno:A2", "white", [ "h278.4", "v133.7" ] ],
+    [ "ldr4:AO", "uno:A3", "white", [ "h278.4", "v-67.9" ] ]
+  ],
+  "dependencies": {}
+}
